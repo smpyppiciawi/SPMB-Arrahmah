@@ -1,0 +1,58 @@
+{
+  "name": "WaitingList",
+  "type": "object",
+  "properties": {
+    "waiting_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal WL"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Nama lengkap"
+    },
+    "previous_school": {
+      "type": "string",
+      "description": "Asal sekolah"
+    },
+    "phone": {
+      "type": "string",
+      "description": "No. WA/Handphone"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Catatan"
+    },
+    "converted_to_student": {
+      "type": "boolean",
+      "default": false,
+      "description": "Sudah dipindahkan ke pendaftaran"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

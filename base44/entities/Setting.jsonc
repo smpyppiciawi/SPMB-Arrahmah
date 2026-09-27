@@ -1,0 +1,49 @@
+{
+  "name": "Setting",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Kunci pengaturan"
+    },
+    "value": {
+      "type": "string",
+      "description": "Nilai pengaturan"
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "interviewer"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

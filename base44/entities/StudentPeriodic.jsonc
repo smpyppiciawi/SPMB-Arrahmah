@@ -1,0 +1,81 @@
+{
+  "name": "StudentPeriodic",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID siswa terkait"
+    },
+    "student_name": {
+      "type": "string",
+      "description": "Nama siswa"
+    },
+    "measurement_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal pengukuran"
+    },
+    "height": {
+      "type": "number",
+      "description": "Tinggi badan (cm)"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Berat badan (kg)"
+    },
+    "blood_type": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "AB",
+        "O",
+        "Tidak Tahu"
+      ],
+      "description": "Golongan darah"
+    },
+    "head_circumference": {
+      "type": "number",
+      "description": "Lingkar kepala (cm)"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Koordinat Latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Koordinat Longitude"
+    },
+    "location_address": {
+      "type": "string",
+      "description": "Alamat lokasi pengukuran"
+    }
+  },
+  "required": [
+    "student_id",
+    "student_name",
+    "measurement_date"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

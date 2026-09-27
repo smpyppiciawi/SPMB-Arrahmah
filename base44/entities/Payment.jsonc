@@ -1,0 +1,50 @@
+{
+  "name": "Payment",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "ID siswa"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal pembayaran"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Nominal pembayaran"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Catatan pembayaran"
+    }
+  },
+  "required": [
+    "student_id",
+    "payment_date",
+    "amount"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

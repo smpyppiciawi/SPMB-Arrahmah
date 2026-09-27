@@ -1,0 +1,58 @@
+{
+  "name": "MeetingParticipant",
+  "type": "object",
+  "properties": {
+    "meeting_id": {
+      "type": "string",
+      "description": "ID rapat terkait"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "ID siswa"
+    },
+    "student_name": {
+      "type": "string",
+      "description": "Nama siswa"
+    },
+    "registration_number": {
+      "type": "string",
+      "description": "Nomor pendaftaran siswa"
+    },
+    "wave": {
+      "type": "string",
+      "description": "Gelombang siswa"
+    },
+    "attended": {
+      "type": "boolean",
+      "default": false,
+      "description": "Status kehadiran"
+    }
+  },
+  "required": [
+    "meeting_id",
+    "student_id",
+    "student_name"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

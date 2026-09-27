@@ -1,0 +1,724 @@
+{
+  "name": "Student",
+  "type": "object",
+  "properties": {
+    "registration_number": {
+      "type": "string",
+      "description": "Nomor pendaftaran otomatis"
+    },
+    "registration_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal pendaftaran"
+    },
+    "wave": {
+      "type": "string",
+      "enum": [
+        "Gelombang 1",
+        "Gelombang 2"
+      ],
+      "description": "Gelombang pendaftaran"
+    },
+    "registration_officer": {
+      "type": "string",
+      "description": "Nama petugas pendaftaran"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "verified",
+        "accepted",
+        "tarik_berkas",
+        "undur_diri"
+      ],
+      "default": "pending",
+      "description": "Status pendaftaran"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Nama lengkap siswa sesuai KK"
+    },
+    "nickname": {
+      "type": "string",
+      "description": "Nama panggilan"
+    },
+    "nisn": {
+      "type": "string",
+      "description": "NISN"
+    },
+    "nik": {
+      "type": "string",
+      "description": "NIK"
+    },
+    "birth_place": {
+      "type": "string",
+      "description": "Tempat lahir"
+    },
+    "birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal lahir"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Laki-laki",
+        "Perempuan"
+      ],
+      "description": "Jenis kelamin"
+    },
+    "religion": {
+      "type": "string",
+      "enum": [
+        "Islam",
+        "Kristen",
+        "Katolik",
+        "Hindu",
+        "Buddha",
+        "Konghucu"
+      ],
+      "default": "Islam",
+      "description": "Agama"
+    },
+    "citizenship": {
+      "type": "string",
+      "enum": [
+        "WNI",
+        "WNA"
+      ],
+      "default": "WNI",
+      "description": "Kewarganegaraan"
+    },
+    "child_order": {
+      "type": "number",
+      "description": "Anak ke-"
+    },
+    "siblings_count": {
+      "type": "number",
+      "description": "Jumlah saudara"
+    },
+    "address": {
+      "type": "string",
+      "description": "Alamat lengkap"
+    },
+    "rt": {
+      "type": "string",
+      "description": "RT"
+    },
+    "rw": {
+      "type": "string",
+      "description": "RW"
+    },
+    "village": {
+      "type": "string",
+      "description": "Kelurahan/Desa"
+    },
+    "district": {
+      "type": "string",
+      "description": "Kecamatan"
+    },
+    "city": {
+      "type": "string",
+      "description": "Kota/Kabupaten"
+    },
+    "province": {
+      "type": "string",
+      "description": "Provinsi"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Kode Pos"
+    },
+    "phone": {
+      "type": "string",
+      "description": "No. Telepon"
+    },
+    "kip_kps_pkh": {
+      "type": "string",
+      "enum": [
+        "Ya",
+        "Tidak"
+      ],
+      "default": "Tidak",
+      "description": "Memiliki KIP/KPS/PKH"
+    },
+    "kip_kps_pkh_number": {
+      "type": "string",
+      "description": "Nomor Kartu KIP/KPS/PKH"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "URL foto siswa"
+    },
+    "father_name": {
+      "type": "string",
+      "description": "Nama ayah"
+    },
+    "father_nik": {
+      "type": "string",
+      "description": "NIK ayah"
+    },
+    "father_birth_place": {
+      "type": "string",
+      "description": "Tempat lahir ayah"
+    },
+    "father_birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal lahir ayah"
+    },
+    "father_education": {
+      "type": "string",
+      "enum": [
+        "Tidak Sekolah",
+        "Putus SD",
+        "SD",
+        "SMP",
+        "SMA",
+        "D1",
+        "D2",
+        "D3",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "description": "Pendidikan ayah"
+    },
+    "father_job": {
+      "type": "string",
+      "enum": [
+        "Guru/Dosen/Pengajar/Pendidik",
+        "PNS/POLRI/TNI",
+        "Karyawan Swasta",
+        "Wiraswasta",
+        "Wirausaha",
+        "Pedagang",
+        "Pegawai Lepas/Buruh",
+        "Tenaga Kerja Indonesia",
+        "Sudah Meninggal",
+        "Tidak Bekerja"
+      ],
+      "description": "Pekerjaan ayah"
+    },
+    "father_income": {
+      "type": "string",
+      "enum": [
+        "Kurang dari 500.000",
+        "500.000 - 999.999",
+        "999.999 - 1.999.999",
+        "2.000.000 - 4.999.999",
+        "5.999.999 - 20.000.000",
+        "Lebih dari 20.000.000",
+        "TIDAK BERPENGHASILAN"
+      ],
+      "description": "Penghasilan ayah"
+    },
+    "father_phone": {
+      "type": "string",
+      "description": "No. HP ayah"
+    },
+    "mother_name": {
+      "type": "string",
+      "description": "Nama ibu"
+    },
+    "mother_nik": {
+      "type": "string",
+      "description": "NIK ibu"
+    },
+    "mother_birth_place": {
+      "type": "string",
+      "description": "Tempat lahir ibu"
+    },
+    "mother_birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal lahir ibu"
+    },
+    "mother_education": {
+      "type": "string",
+      "enum": [
+        "Tidak Sekolah",
+        "Putus SD",
+        "SD",
+        "SMP",
+        "SMA",
+        "D1",
+        "D2",
+        "D3",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "description": "Pendidikan ibu"
+    },
+    "mother_job": {
+      "type": "string",
+      "enum": [
+        "Guru/Dosen/Pengajar/Pendidik",
+        "PNS/POLRI/TNI",
+        "Karyawan Swasta",
+        "Wiraswasta",
+        "Wirausaha",
+        "Pedagang",
+        "Pegawai Lepas/Buruh",
+        "Tenaga Kerja Indonesia",
+        "Sudah Meninggal",
+        "Tidak Bekerja"
+      ],
+      "description": "Pekerjaan ibu"
+    },
+    "mother_income": {
+      "type": "string",
+      "enum": [
+        "Kurang dari 500.000",
+        "500.000 - 999.999",
+        "999.999 - 1.999.999",
+        "2.000.000 - 4.999.999",
+        "5.999.999 - 20.000.000",
+        "Lebih dari 20.000.000",
+        "TIDAK BERPENGHASILAN"
+      ],
+      "description": "Penghasilan ibu"
+    },
+    "mother_phone": {
+      "type": "string",
+      "description": "No. HP ibu"
+    },
+    "guardian_name": {
+      "type": "string",
+      "description": "Nama wali"
+    },
+    "guardian_nik": {
+      "type": "string",
+      "description": "NIK wali"
+    },
+    "guardian_birth_place": {
+      "type": "string",
+      "description": "Tempat lahir wali"
+    },
+    "guardian_birth_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal lahir wali"
+    },
+    "guardian_education": {
+      "type": "string",
+      "enum": [
+        "Tidak Sekolah",
+        "Putus SD",
+        "SD",
+        "SMP",
+        "SMA",
+        "D1",
+        "D2",
+        "D3",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "description": "Pendidikan wali"
+    },
+    "guardian_job": {
+      "type": "string",
+      "enum": [
+        "Guru/Dosen/Pengajar/Pendidik",
+        "PNS/POLRI/TNI",
+        "Karyawan Swasta",
+        "Wiraswasta",
+        "Wirausaha",
+        "Pedagang",
+        "Pegawai Lepas/Buruh",
+        "Tenaga Kerja Indonesia",
+        "Sudah Meninggal",
+        "Tidak Bekerja"
+      ],
+      "description": "Pekerjaan wali"
+    },
+    "guardian_income": {
+      "type": "string",
+      "enum": [
+        "Kurang dari 500.000",
+        "500.000 - 999.999",
+        "999.999 - 1.999.999",
+        "2.000.000 - 4.999.999",
+        "5.999.999 - 20.000.000",
+        "Lebih dari 20.000.000",
+        "TIDAK BERPENGHASILAN"
+      ],
+      "description": "Penghasilan wali"
+    },
+    "guardian_relation": {
+      "type": "string",
+      "description": "Status hubungan dengan siswa"
+    },
+    "guardian_phone": {
+      "type": "string",
+      "description": "No. HP wali"
+    },
+    "guardian_address": {
+      "type": "string",
+      "description": "Alamat wali"
+    },
+    "previous_school": {
+      "type": "string",
+      "description": "Nama sekolah asal"
+    },
+    "previous_school_type": {
+      "type": "string",
+      "enum": [
+        "Negeri",
+        "Swasta",
+        "MI/Pesantren",
+        "Paket/PKBM"
+      ],
+      "description": "Jenis sekolah asal"
+    },
+    "previous_school_address": {
+      "type": "string",
+      "description": "Alamat sekolah asal"
+    },
+    "previous_school_npsn": {
+      "type": "string",
+      "description": "NPSN sekolah asal"
+    },
+    "graduation_year": {
+      "type": "string",
+      "description": "Tahun lulus"
+    },
+    "interview_status": {
+      "type": "string",
+      "enum": [
+        "belum",
+        "lulus",
+        "tidak_lulus"
+      ],
+      "default": "belum",
+      "description": "Status wawancara"
+    },
+    "interview_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Tanggal wawancara"
+    },
+    "interview_notes": {
+      "type": "string",
+      "description": "Catatan wawancara"
+    },
+    "interview_officer": {
+      "type": "string",
+      "description": "Nama pewawancara"
+    },
+    "interview_q1": {
+      "type": "string",
+      "description": "Melalui siapa dan dari mana orangtua/wali mengetahui sekolah kami"
+    },
+    "interview_q2": {
+      "type": "string",
+      "description": "Apa alasan utama memilih SMP YPPI Arrahmah"
+    },
+    "interview_q3": {
+      "type": "string",
+      "description": "Apakah Bapak/Ibu dapat membaca Al-Quran"
+    },
+    "interview_q4": {
+      "type": "string",
+      "description": "Apakah Bapak/Ibu merokok"
+    },
+    "interview_q5": {
+      "type": "string",
+      "description": "Apakah siswa merokok/vape diketahui oleh orangtua/wali"
+    },
+    "interview_q6": {
+      "type": "string",
+      "description": "Apakah siswa mengaji dirumah"
+    },
+    "interview_q7": {
+      "type": "string",
+      "description": "Bagaimana kebiasaan siswa dalam belajar dirumah"
+    },
+    "interview_q8": {
+      "type": "string",
+      "description": "Mata pelajaran yang disukai siswa"
+    },
+    "interview_q9": {
+      "type": "string",
+      "description": "Mata pelajaran yang tidak disukai siswa"
+    },
+    "interview_q10": {
+      "type": "string",
+      "description": "Apakah siswa memiliki prestasi akademik/non akademik? Prestasi apa?"
+    },
+    "interview_q11": {
+      "type": "string",
+      "description": "Apakah siswa memiliki alergi? (Tidak ada / Ada)"
+    },
+    "interview_q11_detail": {
+      "type": "string",
+      "description": "Detail alergi siswa"
+    },
+    "interview_q12": {
+      "type": "string",
+      "description": "Ketika siswa memiliki keinginan apakah keinginan tersebut selalu dipenuhi oleh orang tua?"
+    },
+    "interview_q13": {
+      "type": "string",
+      "description": "Bagaimana reaksi anak jika tidak dituruti keinginannya"
+    },
+    "interview_q14": {
+      "type": "string",
+      "description": "Bagaimana tingkat kemandirian siswa dalam melakukan aktifitas harian dirumah"
+    },
+    "interview_q15": {
+      "type": "string",
+      "description": "Bagaimana sikap siswa bertemu orang baru/lingkungan baru"
+    },
+    "interview_q16": {
+      "type": "string",
+      "description": "Berapa uang saku/jajan siswa dalam sehari"
+    },
+    "interview_q17": {
+      "type": "string",
+      "description": "Apakah siswa memiliki handphone (HP) pribadi"
+    },
+    "interview_q18": {
+      "type": "string",
+      "description": "Seberapa sering HP siswa diperiksa oleh orangtua/wali"
+    },
+    "interview_q19": {
+      "type": "string",
+      "description": "Apakah orangtua/wali mengetahui/memantau pergaulan siswa dirumah dan diluar sekolah"
+    },
+    "interview_q20": {
+      "type": "string",
+      "description": "Apakah orangtua/wali memiliki batasan waktu ketika siswa bermain"
+    },
+    "interview_q21": {
+      "type": "boolean",
+      "description": "Apakah orangtua/wali mengizinkan siswa mengikuti kegiatan keagamaan"
+    },
+    "interview_q21_reason": {
+      "type": "string",
+      "description": "Alasan jika tidak mengizinkan kegiatan keagamaan"
+    },
+    "interview_q22": {
+      "type": "boolean",
+      "description": "Apakah orangtua/wali bersedia bila siswa mengikuti tata tertib dan aturan"
+    },
+    "interview_q23": {
+      "type": "boolean",
+      "description": "Apakah orangtua/wali bersedia memenuhi panggilan pihak sekolah"
+    },
+    "interview_q24": {
+      "type": "boolean",
+      "description": "Apakah orang tua menerima jika siswa mendapatkan improvement/point"
+    },
+    "interview_q25": {
+      "type": "string",
+      "enum": [
+        "Orang Tua Kandung",
+        "Orang Tua Sambung",
+        "Kakek/Nenek/Kerabat Dekat",
+        "Orang Tua Asuh/Angkat"
+      ],
+      "description": "Tinggal dengan siapa"
+    },
+    "interview_q26": {
+      "type": "string",
+      "enum": [
+        "Orang Tua Kandung",
+        "Orang Tua Sambung",
+        "Kakek/Nenek/Kerabat Dekat",
+        "Orang Tua Asuh/Angkat"
+      ],
+      "description": "Pengasuh utama siswa"
+    },
+    "interview_q27": {
+      "type": "string",
+      "enum": [
+        "Tidak",
+        "Ada"
+      ],
+      "description": "Riwayat penyakit"
+    },
+    "interview_q27_detail": {
+      "type": "string",
+      "description": "Detail riwayat penyakit"
+    },
+    "meeting_attendance": {
+      "type": "string",
+      "enum": [
+        "belum",
+        "hadir_gel1",
+        "hadir_gel2"
+      ],
+      "default": "belum",
+      "description": "Kehadiran rapat orang tua"
+    },
+    "meeting_absent_reason": {
+      "type": "string",
+      "description": "Alasan tidak hadir rapat"
+    },
+    "quran_test_status": {
+      "type": "string",
+      "enum": [
+        "belum",
+        "lulus",
+        "tidak_lulus"
+      ],
+      "default": "belum",
+      "description": "Status tes mengaji"
+    },
+    "quran_test_score": {
+      "type": "number",
+      "description": "Nilai tes mengaji"
+    },
+    "quran_test_level": {
+      "type": "string",
+      "enum": [
+        "Iqro 1",
+        "Iqro 2",
+        "Iqro 3",
+        "Iqro 4",
+        "Iqro 5",
+        "Iqro 6",
+        "Al Qur'an"
+      ],
+      "description": "Level mengaji"
+    },
+    "quran_test_notes": {
+      "type": "string",
+      "description": "Catatan tes mengaji"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "belum_bayar",
+        "dp",
+        "lunas",
+        "yatim",
+        "beasiswa"
+      ],
+      "default": "belum_bayar",
+      "description": "Status pembayaran"
+    },
+    "total_cost_override": {
+      "type": "number",
+      "description": "Override total biaya manual (jika diisi, menggunakan nilai ini bukan nilai gelombang)"
+    },
+    "uniform_batik_size": {
+      "type": "string",
+      "description": "Ukuran seragam batik"
+    },
+    "uniform_sport_size": {
+      "type": "string",
+      "description": "Ukuran seragam olahraga"
+    },
+    "uniform_pangsi_size": {
+      "type": "string",
+      "description": "Ukuran pangsi (laki-laki)"
+    },
+    "uniform_kebaya_size": {
+      "type": "string",
+      "description": "Ukuran kebaya (perempuan)"
+    },
+    "doc_birth_certificate": {
+      "type": "boolean",
+      "default": false,
+      "description": "Akta kelahiran"
+    },
+    "doc_family_card": {
+      "type": "boolean",
+      "default": false,
+      "description": "Kartu keluarga"
+    },
+    "doc_ktp_father": {
+      "type": "boolean",
+      "default": false,
+      "description": "KTP ayah"
+    },
+    "doc_ktp_mother": {
+      "type": "boolean",
+      "default": false,
+      "description": "KTP ibu"
+    },
+    "doc_photo_3x4": {
+      "type": "boolean",
+      "default": false,
+      "description": "Pas foto 3x4"
+    },
+    "doc_ijazah": {
+      "type": "boolean",
+      "default": false,
+      "description": "Ijazah/SKL"
+    },
+    "doc_skhun": {
+      "type": "boolean",
+      "default": false,
+      "description": "SKHUN"
+    },
+    "doc_nisn_card": {
+      "type": "boolean",
+      "default": false,
+      "description": "Kartu NISN/NISN via Website"
+    },
+    "doc_kip": {
+      "type": "boolean",
+      "default": false,
+      "description": "Kartu KIP/KPS/PKH (Jika ada)"
+    }
+  },
+  "required": [
+    "full_name",
+    "nik",
+    "birth_place",
+    "birth_date",
+    "gender",
+    "address",
+    "father_name",
+    "mother_name",
+    "previous_school",
+    "registration_date",
+    "wave"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "interviewer"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "interviewer"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
